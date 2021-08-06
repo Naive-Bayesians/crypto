@@ -2,7 +2,12 @@
 experiment:
     name: exp_hello_world
 
+# Add custom config here
 
+# -----------------
+
+
+# --- Do not change --- 
 output:
     path:
         root: experiments/${experiment.name}/output/${now:%Y-%m-%d_%H-%M-%S}
