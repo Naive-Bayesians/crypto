@@ -13,6 +13,7 @@ scikit-learn = "^0.24.2"
 plotly = "^5.1.0"
 mkdocs = "^1.2.2"
 xlrd = "^2.0.1"
+ccxt = "^1.54.58"
 
 
 [tool.poetry.dev-dependencies]
