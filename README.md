@@ -3,8 +3,9 @@
 ## First Time Setup
 
 1. Install PyEnv to manage python installations. 
-* For Mac users: `brew install pyenv`
-* For Linux users: `curl https://pyenv.run | bash`
+
+    * For Mac users: `brew install pyenv`
+    * For Linux users: `curl https://pyenv.run | bash`
 
 2. Add the following lines to your `~/.bash_profile`
 
@@ -30,7 +31,7 @@
 
     ```bash
 
-    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python
 
     source ~/.poetry/env
 
