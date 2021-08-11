@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "crypto"
+version = "0.1.0"
+description = ""
+authors = ["Sithan Kanna <sithankanna@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+hydra-core = "^1.1.0"
+hydra-colorlog = "^1.1.0"
+statsmodels = "^0.12.2"
+scikit-learn = "^0.24.2"
+plotly = "^5.1.0"
+mkdocs = "^1.2.2"
+xlrd = "^2.0.1"
+ccxt = "^1.54.58"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pandas-profiling = {extras = ["notebook"], version = "^3.0.0"}
+black = "^21.7b0"
+nb-black = "^1.0.7"
+coverage = {extras = ["toml"], version = "^5.5"}
+pytest-cov = "^2.12.1"
+
+[tool.poetry.scripts]
+main = "crypto.console:main"
+
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
