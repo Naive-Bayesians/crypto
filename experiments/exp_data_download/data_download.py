@@ -2,7 +2,7 @@
 To run this script:
 poetry run main --config-name config
 
-Adapted from: https://larshaendler.medium.com/4-things-to-do-before-writing-code-in-any-project-868ed2d575ef
+Adapted from: https://www.linkedin.com/pulse/download-historical-data-all-cryptocoins-ccxt-gursel-karacor/
 """
 
 # TODO does this make sense as an experiment or should it be a separate utility?
