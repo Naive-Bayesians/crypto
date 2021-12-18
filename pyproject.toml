@@ -14,6 +14,7 @@ plotly = "^5.1.0"
 mkdocs = "^1.2.2"
 xlrd = "^2.0.1"
 ccxt = "^1.54.58"
+schedule = "^1.1.0"
 
 
 [tool.poetry.dev-dependencies]
