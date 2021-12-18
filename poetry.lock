@@ -151,20 +151,6 @@ six = ">=1.9.0"
 webencodings = "*"
 
 [[package]]
-name = "bottleneck"
-version = "1.3.2"
-description = "Fast NumPy array functions written in C"
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-numpy = "*"
-
-[package.extras]
-doc = ["numpydoc", "sphinx", "gitpython"]
-
-[[package]]
 name = "ccxt"
 version = "1.54.58"
 description = "A JavaScript / Python / PHP cryptocurrency trading library with support for 130+ exchanges"
@@ -922,7 +908,7 @@ test = ["hypothesis (>=3.58)", "pytest (>=6.0)", "pytest-xdist"]
 
 [[package]]
 name = "pandas-profiling"
-version = "3.0.0"
+version = "3.1.0"
 description = "Generate profile report for pandas DataFrame"
 category = "dev"
 optional = false
@@ -932,11 +918,13 @@ python-versions = ">=3.6"
 htmlmin = ">=0.1.12"
 ipywidgets = {version = ">=7.5.1", optional = true, markers = "extra == \"notebook\""}
 jinja2 = ">=2.11.1"
-joblib = "*"
+joblib = ">=1.0.1,<1.1.0"
 jupyter-client = {version = ">=6.0.0", optional = true, markers = "extra == \"notebook\""}
 jupyter-core = {version = ">=4.6.3", optional = true, markers = "extra == \"notebook\""}
+markupsafe = ">=2.0.1,<2.1.0"
 matplotlib = ">=3.2.0"
 missingno = ">=0.4.2"
+multimethod = ">=1.4"
 numpy = ">=1.16.0"
 pandas = ">=0.25.3,<1.0.0 || >1.0.0,<1.0.1 || >1.0.1,<1.0.2 || >1.0.2,<1.1.0 || >1.1.0"
 phik = ">=0.11.1"
@@ -947,7 +935,7 @@ scipy = ">=1.4.1"
 seaborn = ">=0.10.1"
 tangled-up-in-unicode = "0.1.0"
 tqdm = ">=4.48.2"
-visions = {version = "0.7.1", extras = ["type_image_path"]}
+visions = {version = "0.7.4", extras = ["type_image_path"]}
 
 [package.extras]
 notebook = ["jupyter-client (>=6.0.0)", "jupyter-core (>=4.6.3)", "ipywidgets (>=7.5.1)"]
@@ -1300,6 +1288,14 @@ socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 use_chardet_on_py3 = ["chardet (>=3.0.2,<5)"]
 
 [[package]]
+name = "schedule"
+version = "1.1.0"
+description = "Job scheduling for humans."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "scikit-learn"
 version = "0.24.2"
 description = "A set of python modules for machine learning and data mining"
@@ -1513,7 +1509,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "visions"
-version = "0.7.1"
+version = "0.7.4"
 description = "Visions"
 category = "dev"
 optional = false
@@ -1521,9 +1517,8 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 attrs = ">=19.3.0"
-bottleneck = "*"
 imagehash = {version = "*", optional = true, markers = "extra == \"type_image_path\""}
-multimethod = "1.4"
+multimethod = ">=1.4"
 networkx = ">=2.4"
 numpy = "*"
 pandas = ">=0.25.3"
@@ -1531,10 +1526,10 @@ Pillow = {version = "*", optional = true, markers = "extra == \"type_image_path\
 tangled-up-in-unicode = ">=0.0.4"
 
 [package.extras]
-all = ["numpy", "pandas (>=0.25.3)", "attrs (>=19.3.0)", "networkx (>=2.4)", "bottleneck", "tangled-up-in-unicode (>=0.0.4)", "multimethod (==1.4)", "shapely", "imagehash", "pillow", "pydot", "pygraphviz", "matplotlib"]
+all = ["numpy", "pandas (>=0.25.3)", "attrs (>=19.3.0)", "networkx (>=2.4)", "tangled-up-in-unicode (>=0.0.4)", "multimethod (>=1.4)", "shapely", "imagehash", "pillow", "pydot", "pygraphviz", "matplotlib"]
 dev = ["setuptools (>=46.1.3)", "wheel (>=0.34.2)", "black (>=20.8b1)", "isort (>=5.0.9)", "mypy (>=0.770)", "recommonmark (>=0.6.0)", "nbsphinx", "sphinx-rtd-theme (>=0.4.3)", "sphinx-autodoc-typehints (>=1.10.3)", "ipython", "sphinx-copybutton"]
 plotting = ["pydot", "pygraphviz", "matplotlib"]
-test = ["matplotlib", "imagehash", "pillow", "shapely", "mypy (>=0.800)", "black (>=19.10b0)", "isort (>=5.0.9)", "big-o (>=0.10.1)", "twine (>=3.1.1)", "pydot", "pytest (>=5.2.0)", "check-manifest (>=0.41)", "pandas", "pre-commit"]
+test = ["matplotlib", "imagehash", "pillow", "shapely", "mypy (>=0.800)", "black (>=19.10b0)", "isort (>=5.0.9)", "big-o (>=0.10.1)", "twine (>=3.1.1)", "pydot", "pytest (>=5.2.0)", "check-manifest (>=0.41)", "pandas", "pre-commit", "pytest-spark (>=0.6.0)", "pyarrow (>=1.0.1)"]
 type_geometry = ["shapely"]
 type_image_path = ["imagehash", "pillow"]
 
@@ -1616,7 +1611,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.10"
-content-hash = "c721f884b37b66ba4c464e748d444f1983a5f5e2ad48d600b8719e0c6ce90a74"
+content-hash = "3b2d14e1738812b7d232431d9f0844cda3b2b8ab6b752c648ae72f2109e18d8b"
 
 [metadata.files]
 aiodns = [
@@ -1720,9 +1715,6 @@ black = [
 bleach = [
     {file = "bleach-4.0.0-py2.py3-none-any.whl", hash = "sha256:c1685a132e6a9a38bf93752e5faab33a9517a6c0bb2f37b785e47bf253bdb51d"},
     {file = "bleach-4.0.0.tar.gz", hash = "sha256:ffa9221c6ac29399cc50fcc33473366edd0cf8d5e2cbbbb63296dc327fb67cc8"},
-]
-bottleneck = [
-    {file = "Bottleneck-1.3.2.tar.gz", hash = "sha256:20179f0b66359792ea283b69aa16366419132f3b6cf3adadc0c48e2e8118e573"},
 ]
 ccxt = [
     {file = "ccxt-1.54.58-py2.py3-none-any.whl", hash = "sha256:ec95027a95de1fba2406241c97f5033c27089e4916f3b22157b41f11f8082152"},
@@ -2266,8 +2258,8 @@ pandas = [
     {file = "pandas-1.3.1.tar.gz", hash = "sha256:341935a594db24f3ff07d1b34d1d231786aa9adfa84b76eab10bf42907c8aed3"},
 ]
 pandas-profiling = [
-    {file = "pandas-profiling-3.0.0.tar.gz", hash = "sha256:785757d01a2cac5c64927fe61efdcb12b866195f880d809eaacfb6cb338c47ec"},
-    {file = "pandas_profiling-3.0.0-py2.py3-none-any.whl", hash = "sha256:66aacc4aea66f2b4105bec32387e5175c2d088ba475eeefb2169ee6e89db04c6"},
+    {file = "pandas-profiling-3.1.0.tar.gz", hash = "sha256:120c3696ba014e2db3873fd4d9d58720be75b9726ab95cc8abfe4ffbf5277fe8"},
+    {file = "pandas_profiling-3.1.0-py2.py3-none-any.whl", hash = "sha256:9d10f3a06011618fe4b7b4a77cff71ce7c7b6e7a1f49de92a3a9081c7538ea63"},
 ]
 pandocfilters = [
     {file = "pandocfilters-1.4.3.tar.gz", hash = "sha256:bc63fbb50534b4b1f8ebe1860889289e8af94a23bff7445259592df25a3906eb"},
@@ -2647,6 +2639,10 @@ requests = [
     {file = "requests-2.26.0-py2.py3-none-any.whl", hash = "sha256:6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24"},
     {file = "requests-2.26.0.tar.gz", hash = "sha256:b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"},
 ]
+schedule = [
+    {file = "schedule-1.1.0-py2.py3-none-any.whl", hash = "sha256:617adce8b4bf38c360b781297d59918fbebfb2878f1671d189f4f4af5d0567a4"},
+    {file = "schedule-1.1.0.tar.gz", hash = "sha256:e6ca13585e62c810e13a08682e0a6a8ad245372e376ba2b8679294f377dfc8e4"},
+]
 scikit-learn = [
     {file = "scikit-learn-0.24.2.tar.gz", hash = "sha256:d14701a12417930392cd3898e9646cf5670c190b933625ebe7511b1f7d7b8736"},
     {file = "scikit_learn-0.24.2-cp36-cp36m-macosx_10_13_x86_64.whl", hash = "sha256:d5bf9c863ba4717b3917b5227463ee06860fc43931dc9026747de416c0a10fee"},
@@ -2827,8 +2823,8 @@ urllib3 = [
     {file = "urllib3-1.26.6.tar.gz", hash = "sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"},
 ]
 visions = [
-    {file = "visions-0.7.1-py3-none-any.whl", hash = "sha256:138f45b007f5a58b8faa92f4d288e0da265e6ebf88ca6a5ec655922ab8fb95da"},
-    {file = "visions-0.7.1.tar.gz", hash = "sha256:d9d10a0da8de80d0704c28c084282abbd3273065cd9e6a494b6fe7e3b339ee23"},
+    {file = "visions-0.7.4-py3-none-any.whl", hash = "sha256:16f007e70362b788478b95129bb044dc0718b7530205ebddd8a1ff34a281d28e"},
+    {file = "visions-0.7.4.tar.gz", hash = "sha256:4f66c1da369cdbced5e1e2d2c43104caa8cfb9c694006cea1592e1673cfc1153"},
 ]
 watchdog = [
     {file = "watchdog-2.1.3-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:9628f3f85375a17614a2ab5eac7665f7f7be8b6b0a2a228e6f6a2e91dd4bfe26"},
